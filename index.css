@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poetsen+One&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.dup-body
+{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    background-color:hsl(0, 0%, 94%);
+}
+.main-box
+{
+    height:70%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px 20px 180px 20px;
+    background-color:hsl(0, 0%, 100%);
+}
+.fetch-data{
+    height: 30%;
+    width: 70%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.line{
+    height: 10%;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.l{
+    height: 2.5%;
+    width: 80%;
+    background-color:  hsl(0, 0%, 86%);
+}
+.check
+{
+    height: 70%;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+i{
+    color: hsl(0, 0%, 100%);
+    font-size:xx-large;
+}
+.output{
+    height: 60%;
+    width: 70%;
+    margin-left: 5%;
+}
+.box
+{
+    height: 80%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+h2{
+    font-size: medium;
+    height: 20%;
+    font-weight: 300;
+    color:hsl(0, 1%, 44%);
+}
+input{
+    font-size: xx-large;
+    border-radius: 10px;
+    border: 2px solid hsl(0, 0%, 86%);
+    font-weight: 500;
+    padding-left: 20px;
+    height: 45%;
+}
+.res-box
+{
+    height: 33%;
+    width: 80%;
+    display: flex;
+    margin-left: 10%;
+    align-items: center;
+    /* background-color: aqua; */
+    margin-left: 20%;
+}
+#year,#month,#days
+{
+    font-size: 3.5rem;
+    font-family: "Poppins", sans-serif;
+    color: hsl(259, 100%, 65%);
+}
+h1{
+    font-size:3rem;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+}
+h4
+{
+    height: 20%;
+    color: red;
+    font-size: x-small;
+}
+button
+{
+    height: 100%;
+    background-color: hsl(259, 100%, 65%);
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-weight: 400;
+    width: 100%;
+}
+input:hover{
+    border: 2px solid hsl(259, 100%, 65%);
+}
+@media(max-width:500px)
+{
+    input{
+        font-size:medium;
+        border-radius: 10px;
+        font-weight: 400;
+        padding-left: 10px;
+        height: 45%;
+    }
+h1{
+    font-size:2rem;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+}
+#year,#month,#days
+{
+    font-size: 2rem;
+}
+.fetch-data
+{
+    height: 30%;
+    /* padding-top: 5%; */
+    width: 80%;
+}
+.output{
+    height: 60%;
+    width: 90%;
+    margin-left: 5%;
+}
+.res-box
+{
+    height: 25%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin-left: 15%;
+}
+.main-box
+{
+    height:70%;
+    width: 80%;
+    border-radius: 20px 20px 100px 20px;
+}
+.line{
+    height: 15%;
+    width: 80%;
+}
+.l{
+    height: 3%;
+    width: 60%;
+}
+.check
+{
+    height: 60%;
+    width: 40%;
+    display: flex;
+}
+h2
+{
+    font-size: small;
+    font-weight: 500;
+}
+h4
+{
+    font-size: xx-small;
+    width: 100%;
+}
+
+}

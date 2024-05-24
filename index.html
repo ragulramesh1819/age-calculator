@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>age-calculator</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />;
+</head>
+<body>
+    <div class="dup-body">
+        <div class="main-box">
+            <div class="fetch-data">
+                <div class="box">
+                    <h2>Day</h2>
+                    <input  id="day-input" type="text">
+                    <h4 id="day-verify"></h4>
+                </div>
+                <div class="box">
+                    <h2>Month</h2>
+                    <input id="mo" type="text">
+                    <h4 id="mon-verify"></h4>
+                </div>
+                <div class="box">
+                    <h2>Year</h2>
+                    <input id="ye" type="text">
+                    <h4 id="year-verify"></h4>
+                </div>
+            </div>
+            <div class="line">
+                <div class="l"></div>
+                <div class="check"  >
+                    <button id="l">check</button>
+                    <!-- <i class="fa-solid fa-arrow-down"></i> -->
+                </div>
+            </div>
+            <div class="output">
+                <div class="res-box">
+                    <h1 id="year">--</h1>
+                    <h1>‎‎‎Years</h1>
+                </div>
+                <div class="res-box">
+                    <h1 id="month">--</h1>
+                    <h1>‎‎‎months</h1>
+                </div>
+                <div class="res-box">
+                    <h1 id="days">--</h1>
+                    <h1>‎‎‎days</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("l").addEventListener("click",datachange);
+        var j=1;
+        var d=1;
+        var f=1;
+        var y=1;
+        function datachange()
+        {
+            let date = new Date();
+            let da=document.getElementById("day-input").value;
+            let mon=document.getElementById("mo").value;
+            let yea=document.getElementById("ye").value;
+            if(da<=0 || da>31)
+            {
+                document.getElementById("day-verify").innerHTML="Must be a valid day";
+                d=0;
+            }
+            else
+            {
+                document.getElementById("day-verify").innerHTML="";
+                d=1;
+            }
+            if(mon<=0 || mon>12){
+                document.getElementById("mon-verify").innerHTML="Must be a valid month";
+                f=0;
+            }
+            else{
+                document.getElementById("mon-verify").innerHTML="";
+                f=1;
+            }
+            if(yea<=0 || yea>date.getFullYear())
+            {
+                document.getElementById("year-verify").innerHTML="Must be a valid year";
+                y=0;
+            }
+            else{
+                document.getElementById("year-verify").innerHTML="";
+                y=1;
+            }
+            if(d==1 && y==1 && f==1){
+                let ver=date.getFullYear()-yea-1;
+                if(ver<0)
+                ver=0;
+            document.getElementById("year").innerHTML=ver;
+            document.getElementById("month").innerHTML=Math.abs(date.getMonth()-mon)+1;
+            document.getElementById("days").innerHTML=Math.abs(date.getDate()-da);
+            if(j==1){
+            document.getElementById("l").innerHTML="reset";
+            j=0;
+            }
+            else{
+                document.getElementById("l").innerHTML="check";
+                document.getElementById("year").innerHTML="--";
+                document.getElementById("month").innerHTML="--";
+                document.getElementById("days").innerHTML="--";
+
+                document.getElementById("day-input").value="";
+                document.getElementById("mo").value="";
+                document.getElementById("ye").value="";
+
+                j=1;
+            }
+            }
+            
+        }
+    </script>
+</body>
+</html>
